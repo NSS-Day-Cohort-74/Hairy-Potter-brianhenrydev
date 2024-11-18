@@ -120,12 +120,31 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   > 1.) I created the Objects with the makePottery function.
+
+     2.) I added properties (fired and cracked) to those Objects with the firePottery function,
+         cracked is variable based on the temp argument passed into the function.
+
+     3.) Then I passed each pottery object into the toSellOrNotToSell function which checks the objects weight
+         and cracked properties and adds a price property based on weight, then checks if cracked property is true/false
+         if false it pushes the object to the potteryToBeSold Array.
+
+     4.) I invoked the potteryList function (and assigned it to a variable)
+         which assigns the return value of the usePottery function (an array of objects)
+         to a variable and uses the .map method to iterate over that variable and map a template string containing the specified
+         properties from each object to a corresponding index in a new array which i use the .join method on and return the resulting string.
+     
+     5.) I then used the document method .querySelector to assign the html tag with the .potteryList class attribute to a variable
+         and then assigned that variable to the value of the variable containing the html string.
+
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/3bd2c9e15a694f28bd77703df28b8539?sid=9f6355b7-8025-42bf-816b-d1c77893b9dd
+
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > Because modularization makes code easier to read, and each module has a separate responsibility, organization is also easier with modularized code.
+
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > I would have to have to rethink and edit the logical structure of the toSellOrNotToSell function in the PotteryCatalog module. and the storage array for sellable pottery.
+
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/32662323e746447a86fa9b52f4a9ef8b?sid=3b98d6b7-919e-4b36-8c31-97bd2b9379fb
