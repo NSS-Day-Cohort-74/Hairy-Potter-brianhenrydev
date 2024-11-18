@@ -15,5 +15,3 @@ export const potteryList = () => {
 	);
 	return potteryHtml.join("");
 };
-
-console.log(potteryList());
